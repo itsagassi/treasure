@@ -14,7 +14,7 @@ export default function Home() {
   const targetDate = new Date(2024, 1, 5);
 
   // Function to handle form input changes
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -23,7 +23,7 @@ export default function Home() {
   };
   
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (formData.password === rightPass && isToday(targetDate)) {
@@ -33,7 +33,7 @@ export default function Home() {
     }
   };
 
-  const isToday = (target) => {
+  const isToday = (target : Date) => {
     const today = new Date();
     return (
       target.getDate() === today.getDate() &&
