@@ -32,7 +32,7 @@ export default function Flashback() {
             <div ref={triggerRef}>
                 <div className=" h-screen w-[600vw] flex flex-row relative" ref={sectionRef}>
                     <div className=" h-screen w-screen bg-black grid justify-center content-center text-white ">
-                        <p>let's</p>
+                        <p>let&apos;s</p>
                         <p className=" font-serif font-bold font">REWIND...</p>
                     </div>
                     <div className=" h-screen w-[400vw] bg-gradient-to-r from-black to-white"></div>
