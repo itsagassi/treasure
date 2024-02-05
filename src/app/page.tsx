@@ -4,10 +4,13 @@ import BeMine from "@/components/be_mine";
 import FuckMe from "@/components/fuck_me";
 
 import { proposalPass, piPass, ihPass, fuckMePass } from "@/components/password";
+import Pinter from "@/components/piPage";
 
 export default function Home() {
   const [isBeMine, SetIsBeMine] = useState(false);
   const [isFuckMe, SetIsFuckMe] = useState(false);
+  const [isPi, SetIsPi] = useState(false);
+  const [isCium, SetIsCium] = useState(false);
   const [isOpen, SetIsOpen] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -49,6 +52,11 @@ export default function Home() {
         SetIsFuckMe(true);
         break;
 
+      case piPass:
+        SetIsOpen(true);
+        SetIsPi(true);
+        break;
+
       default:
         SetIsOpen(false);
         break;
@@ -83,6 +91,7 @@ export default function Home() {
       {!isOpen && passwordForm()}
       {isBeMine && <BeMine />}
       {isFuckMe && <FuckMe />}
+      {isPi && <Pinter />}
     </main>
   );
 }
