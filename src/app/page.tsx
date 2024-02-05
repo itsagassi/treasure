@@ -15,7 +15,8 @@ export default function Home() {
     password: ""
   });
 
-  const rightPass = "this love"
+  const proposalPass = "this love";
+  const piPass = "31415926535897932384246";
   const [isBeMine, SetIsBeMine] = useState(false);
   const targetDate = new Date(2024, 1, 5);
 
@@ -32,7 +33,7 @@ export default function Home() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (formData.password === rightPass && isToday(targetDate)) {
+    if (formData.password === proposalPass && isToday(targetDate)) {
       SetIsBeMine(true);
     } else {
       SetIsBeMine(false);
@@ -148,7 +149,7 @@ export default function Home() {
               </div>
           </div>
           <p className=" flex items-center justify-center">and moreeeee!!!</p>
-          <div className=" h-[400vh] flex flex-col items-center justify-evenly">
+          <div className=" h-[300vh] flex flex-col items-center justify-evenly">
             <div>
               <p>there&apos;s a lot more things i want to do</p>
             </div>
@@ -162,7 +163,9 @@ export default function Home() {
               <p>bruno, the weeknd, season,</p>
               <p>and more!!!</p>
             </div>
-            <div className=" flex">
+          </div>
+          <div>
+            <div className=" h-screen flex items-center justify-center">
               <p>I love you rosie,</p> <p className=" font-black pl-1">be mine</p>
             </div>
           </div>
