@@ -2,7 +2,7 @@ import Countdown from "./countdown";
 
 
 export default function FuckMe() {
-    const targetDate = new Date('2024-02-06T20:00:00+07:00');
+    const targetDate = new Date('2024-02-17T23:00:00+07:00');
 
     return (
         <>

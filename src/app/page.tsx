@@ -1,16 +1,17 @@
 "use client"
 import React, { useState } from "react"
+import Pinter from "@/components/piPage";
 import BeMine from "@/components/be_mine";
 import FuckMe from "@/components/fuck_me";
+import Valentine from "@/components/valentine";
+import { proposalPass, piPass, ihPass, fuckMePass, valentinePass } from "@/components/password";
 
-import { proposalPass, piPass, ihPass, fuckMePass } from "@/components/password";
-import Pinter from "@/components/piPage";
 
 export default function Home() {
   const [isBeMine, SetIsBeMine] = useState(false);
   const [isFuckMe, SetIsFuckMe] = useState(false);
+  const [isValentine, SetIsValentine] = useState(false);
   const [isPi, SetIsPi] = useState(false);
-  const [isCium, SetIsCium] = useState(false);
   const [isOpen, SetIsOpen] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ export default function Home() {
   });
 
   const targetDate = new Date(2024, 1, 5);
+  const valentineDate = new Date(2024, 1, 15);
   
   const isToday = (target : Date) => {
     const today = new Date();
@@ -57,6 +59,11 @@ export default function Home() {
         SetIsPi(true);
         break;
 
+      case valentinePass:
+        SetIsOpen(true);
+        SetIsValentine(true);
+        break;
+
       default:
         SetIsOpen(false);
         break;
@@ -92,6 +99,7 @@ export default function Home() {
       {isBeMine && <BeMine />}
       {isFuckMe && <FuckMe />}
       {isPi && <Pinter />}
+      {isValentine && <Valentine />}
     </main>
   );
 }
