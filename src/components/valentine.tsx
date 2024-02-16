@@ -22,6 +22,7 @@ export default function Valentine () {
     }
     const handleVal = () => {
         SetIsHundred(false);
+        SetIsHundredAll(false);
         SetIsVal(true);
     }
     
@@ -136,13 +137,13 @@ export default function Valentine () {
         <>
             <div className=" bg-pink-200 text-white h-screen w-screen flex items-center justify-center font-serif flex-col">
                 {isHundred && 
-                    <div className=" flex justify-center">
+                    <div className=" flex justify-center px-10 text-center">
                         {text}
                         < Cursor />
                     </div>
                 }
                 {isVal && 
-                    <div className=" flex justify-center">
+                    <div className=" flex justify-center px-10 text-center">
                         will be filled with our valentine journey on 15th feb!
                     </div>
                 }
