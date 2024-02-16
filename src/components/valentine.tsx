@@ -207,7 +207,7 @@ export default function Valentine () {
                     <div>43. you care</div>
                     <div>44. you&apos;re weird, my kind of weird</div>
                     <div>45. how you sleep</div>
-                    <div>46. the way I feel about myself when I'm with you</div>
+                    <div>46. the way I feel about myself when I&apos;m with you</div>
                     <div>47. you stay with me</div>
                     <div>48. you encourage me</div>
                     <div>49. you make me want to be my best self</div>
